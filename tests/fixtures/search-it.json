@@ -1,0 +1,821 @@
+{
+  "items": [
+    {
+      "content_source": "search",
+      "favourite_count": 25,
+      "id": 10051317969,
+      "is_favourite": false,
+      "item_box": {
+        "accessibility_label": "Brassière de sport Nike, Brand: Nike Air, Condizioni: Nuovo senza cartellino, Taglia: L, 6.00 €, 7.00 €",
+        "exposures": [],
+        "ff_exposures": [],
+        "first_line": "Nike Air",
+        "item_id": 10051317969,
+        "second_line": "L · Nuovo senza cartellino"
+      },
+      "photo": {
+        "dominant_color": "#54524F",
+        "dominant_color_opaque": "#CCCBCA",
+        "extra": {},
+        "full_size_url": "https://images1.vinted.net/tc/06_0082b_FgHcZi296vwTGmKyGM3kBxsu/7d959cfd.webp?s=1d58ec3bbc589c7ce8b9984aa932f2fe90fa695e",
+        "height": 800,
+        "high_resolution": {
+          "id": "06_0082b_FgHcZi296vwTGmKyGM3kBxsu",
+          "orientation": null
+        },
+        "id": 1,
+        "image_no": 1,
+        "is_main": true,
+        "thumbnails": [
+          {
+            "height": 100,
+            "original_size": null,
+            "type": "thumb70x100",
+            "url": "https://images1.vinted.net/t/06_0082b_FgHcZi296vwTGmKyGM3kBxsu/70x100/7d959cfd.webp?s=d59684814def49519e3efd10e7898d42acb2a638",
+            "width": 70
+          },
+          {
+            "height": 210,
+            "original_size": null,
+            "type": "thumb150x210",
+            "url": "https://images1.vinted.net/t/06_0082b_FgHcZi296vwTGmKyGM3kBxsu/150x210/7d959cfd.webp?s=2f727a39936b44d49de16432ec8932cdf518b50a",
+            "width": 150
+          },
+          {
+            "height": 430,
+            "original_size": null,
+            "type": "thumb310x430",
+            "url": "https://images1.vinted.net/t/06_0082b_FgHcZi296vwTGmKyGM3kBxsu/310x430/7d959cfd.webp?s=4f801b1f26d839c4d12908f989cdf7662b85b09e",
+            "width": 310
+          },
+          {
+            "height": 428,
+            "original_size": true,
+            "type": "thumb428x624",
+            "url": "https://images1.vinted.net/t/06_0082b_FgHcZi296vwTGmKyGM3kBxsu/f800/7d959cfd.webp?s=f34e4ddf830f012135cccc1f93b2fe95a359ec98",
+            "width": 321
+          },
+          {
+            "height": 624,
+            "original_size": true,
+            "type": "thumb624x428",
+            "url": "https://images1.vinted.net/t/06_0082b_FgHcZi296vwTGmKyGM3kBxsu/f800/7d959cfd.webp?s=f34e4ddf830f012135cccc1f93b2fe95a359ec98",
+            "width": 468
+          },
+          {
+            "height": 364,
+            "original_size": true,
+            "type": "thumb364x428",
+            "url": "https://images1.vinted.net/t/06_0082b_FgHcZi296vwTGmKyGM3kBxsu/f800/7d959cfd.webp?s=f34e4ddf830f012135cccc1f93b2fe95a359ec98",
+            "width": 273
+          }
+        ],
+        "url": "https://images1.vinted.net/t/06_0082b_FgHcZi296vwTGmKyGM3kBxsu/f800/7d959cfd.webp?s=f34e4ddf830f012135cccc1f93b2fe95a359ec98",
+        "width": 600
+      },
+      "photos": [
+        {
+          "dominant_color": "#54524F",
+          "dominant_color_opaque": "#CCCBCA",
+          "extra": {},
+          "full_size_url": "https://images1.vinted.net/tc/06_0082b_FgHcZi296vwTGmKyGM3kBxsu/7d959cfd.webp?s=1d58ec3bbc589c7ce8b9984aa932f2fe90fa695e",
+          "height": 800,
+          "high_resolution": {
+            "id": "06_0082b_FgHcZi296vwTGmKyGM3kBxsu",
+            "orientation": null
+          },
+          "id": 1,
+          "image_no": 1,
+          "is_main": true,
+          "thumbnails": [
+            {
+              "height": 100,
+              "original_size": null,
+              "type": "thumb70x100",
+              "url": "https://images1.vinted.net/t/06_0082b_FgHcZi296vwTGmKyGM3kBxsu/70x100/7d959cfd.webp?s=d59684814def49519e3efd10e7898d42acb2a638",
+              "width": 70
+            },
+            {
+              "height": 210,
+              "original_size": null,
+              "type": "thumb150x210",
+              "url": "https://images1.vinted.net/t/06_0082b_FgHcZi296vwTGmKyGM3kBxsu/150x210/7d959cfd.webp?s=2f727a39936b44d49de16432ec8932cdf518b50a",
+              "width": 150
+            },
+            {
+              "height": 430,
+              "original_size": null,
+              "type": "thumb310x430",
+              "url": "https://images1.vinted.net/t/06_0082b_FgHcZi296vwTGmKyGM3kBxsu/310x430/7d959cfd.webp?s=4f801b1f26d839c4d12908f989cdf7662b85b09e",
+              "width": 310
+            },
+            {
+              "height": 428,
+              "original_size": true,
+              "type": "thumb428x624",
+              "url": "https://images1.vinted.net/t/06_0082b_FgHcZi296vwTGmKyGM3kBxsu/f800/7d959cfd.webp?s=f34e4ddf830f012135cccc1f93b2fe95a359ec98",
+              "width": 321
+            },
+            {
+              "height": 624,
+              "original_size": true,
+              "type": "thumb624x428",
+              "url": "https://images1.vinted.net/t/06_0082b_FgHcZi296vwTGmKyGM3kBxsu/f800/7d959cfd.webp?s=f34e4ddf830f012135cccc1f93b2fe95a359ec98",
+              "width": 468
+            },
+            {
+              "height": 364,
+              "original_size": true,
+              "type": "thumb364x428",
+              "url": "https://images1.vinted.net/t/06_0082b_FgHcZi296vwTGmKyGM3kBxsu/f800/7d959cfd.webp?s=f34e4ddf830f012135cccc1f93b2fe95a359ec98",
+              "width": 273
+            }
+          ],
+          "url": "https://images1.vinted.net/t/06_0082b_FgHcZi296vwTGmKyGM3kBxsu/f800/7d959cfd.webp?s=f34e4ddf830f012135cccc1f93b2fe95a359ec98",
+          "width": 600
+        }
+      ],
+      "price": {
+        "amount": "6.00",
+        "currency_code": "EUR"
+      },
+      "promoted": false,
+      "search_tracking_params": {
+        "score": 1
+      },
+      "service_fee": {
+        "amount": "1.00",
+        "currency_code": "EUR"
+      },
+      "show_1st_time_seller_discount": false,
+      "title": "Brassière de sport Nike",
+      "total_item_price": {
+        "amount": "7.00",
+        "currency_code": "EUR"
+      },
+      "url": "/items/10051317969-brassiere-de-sport-nike",
+      "user": {
+        "business": false,
+        "id": 125244555,
+        "login": "kyllianaudinot"
+      },
+      "view_count": 0
+    },
+    {
+      "content_source": "search_promoted_items",
+      "favourite_count": 29,
+      "id": 10035663984,
+      "is_favourite": false,
+      "item_box": {
+        "accessibility_label": "Nike Air Max 1 “Grey Gum”, Brand: Nike, Condizioni: Buone, Taglia: 41, 55.00 €, 58.45 €",
+        "exposures": [],
+        "ff_exposures": [],
+        "first_line": "Nike",
+        "item_id": 10035663984,
+        "second_line": "41 · Buone"
+      },
+      "photo": {
+        "dominant_color": "#67686A",
+        "dominant_color_opaque": "#D1D2D2",
+        "extra": {},
+        "full_size_url": "https://images1.vinted.net/tc/05_00d73_x5zv13NZTid2hrBUjpK3saxK/867fb021.webp?s=1a2de5d12f620bf703b3f561b9551e9d5e51a89a",
+        "height": 800,
+        "high_resolution": {
+          "id": "05_00d73_x5zv13NZTid2hrBUjpK3saxK",
+          "orientation": null
+        },
+        "id": 1,
+        "image_no": 1,
+        "is_main": true,
+        "thumbnails": [
+          {
+            "height": 100,
+            "original_size": null,
+            "type": "thumb70x100",
+            "url": "https://images1.vinted.net/t/05_00d73_x5zv13NZTid2hrBUjpK3saxK/70x100/867fb021.webp?s=29105dc844d1ad849b4df48665c9d982a78c3395",
+            "width": 70
+          },
+          {
+            "height": 210,
+            "original_size": null,
+            "type": "thumb150x210",
+            "url": "https://images1.vinted.net/t/05_00d73_x5zv13NZTid2hrBUjpK3saxK/150x210/867fb021.webp?s=6e0aae3ddd8d429409ca1478c20229c71c408db9",
+            "width": 150
+          },
+          {
+            "height": 430,
+            "original_size": null,
+            "type": "thumb310x430",
+            "url": "https://images1.vinted.net/t/05_00d73_x5zv13NZTid2hrBUjpK3saxK/310x430/867fb021.webp?s=efe8e3374e2334ba3a98ff4439775860967627b8",
+            "width": 310
+          },
+          {
+            "height": 428,
+            "original_size": true,
+            "type": "thumb428x624",
+            "url": "https://images1.vinted.net/t/05_00d73_x5zv13NZTid2hrBUjpK3saxK/f800/867fb021.webp?s=4e7468b8e9beabeb8f5bad12d65b3cb5a9197e63",
+            "width": 321
+          },
+          {
+            "height": 624,
+            "original_size": true,
+            "type": "thumb624x428",
+            "url": "https://images1.vinted.net/t/05_00d73_x5zv13NZTid2hrBUjpK3saxK/f800/867fb021.webp?s=4e7468b8e9beabeb8f5bad12d65b3cb5a9197e63",
+            "width": 468
+          },
+          {
+            "height": 364,
+            "original_size": true,
+            "type": "thumb364x428",
+            "url": "https://images1.vinted.net/t/05_00d73_x5zv13NZTid2hrBUjpK3saxK/f800/867fb021.webp?s=4e7468b8e9beabeb8f5bad12d65b3cb5a9197e63",
+            "width": 273
+          }
+        ],
+        "url": "https://images1.vinted.net/t/05_00d73_x5zv13NZTid2hrBUjpK3saxK/f800/867fb021.webp?s=4e7468b8e9beabeb8f5bad12d65b3cb5a9197e63",
+        "width": 600
+      },
+      "photos": [
+        {
+          "dominant_color": "#67686A",
+          "dominant_color_opaque": "#D1D2D2",
+          "extra": {},
+          "full_size_url": "https://images1.vinted.net/tc/05_00d73_x5zv13NZTid2hrBUjpK3saxK/867fb021.webp?s=1a2de5d12f620bf703b3f561b9551e9d5e51a89a",
+          "height": 800,
+          "high_resolution": {
+            "id": "05_00d73_x5zv13NZTid2hrBUjpK3saxK",
+            "orientation": null
+          },
+          "id": 1,
+          "image_no": 1,
+          "is_main": true,
+          "thumbnails": [
+            {
+              "height": 100,
+              "original_size": null,
+              "type": "thumb70x100",
+              "url": "https://images1.vinted.net/t/05_00d73_x5zv13NZTid2hrBUjpK3saxK/70x100/867fb021.webp?s=29105dc844d1ad849b4df48665c9d982a78c3395",
+              "width": 70
+            },
+            {
+              "height": 210,
+              "original_size": null,
+              "type": "thumb150x210",
+              "url": "https://images1.vinted.net/t/05_00d73_x5zv13NZTid2hrBUjpK3saxK/150x210/867fb021.webp?s=6e0aae3ddd8d429409ca1478c20229c71c408db9",
+              "width": 150
+            },
+            {
+              "height": 430,
+              "original_size": null,
+              "type": "thumb310x430",
+              "url": "https://images1.vinted.net/t/05_00d73_x5zv13NZTid2hrBUjpK3saxK/310x430/867fb021.webp?s=efe8e3374e2334ba3a98ff4439775860967627b8",
+              "width": 310
+            },
+            {
+              "height": 428,
+              "original_size": true,
+              "type": "thumb428x624",
+              "url": "https://images1.vinted.net/t/05_00d73_x5zv13NZTid2hrBUjpK3saxK/f800/867fb021.webp?s=4e7468b8e9beabeb8f5bad12d65b3cb5a9197e63",
+              "width": 321
+            },
+            {
+              "height": 624,
+              "original_size": true,
+              "type": "thumb624x428",
+              "url": "https://images1.vinted.net/t/05_00d73_x5zv13NZTid2hrBUjpK3saxK/f800/867fb021.webp?s=4e7468b8e9beabeb8f5bad12d65b3cb5a9197e63",
+              "width": 468
+            },
+            {
+              "height": 364,
+              "original_size": true,
+              "type": "thumb364x428",
+              "url": "https://images1.vinted.net/t/05_00d73_x5zv13NZTid2hrBUjpK3saxK/f800/867fb021.webp?s=4e7468b8e9beabeb8f5bad12d65b3cb5a9197e63",
+              "width": 273
+            }
+          ],
+          "url": "https://images1.vinted.net/t/05_00d73_x5zv13NZTid2hrBUjpK3saxK/f800/867fb021.webp?s=4e7468b8e9beabeb8f5bad12d65b3cb5a9197e63",
+          "width": 600
+        }
+      ],
+      "price": {
+        "amount": "55.00",
+        "currency_code": "EUR"
+      },
+      "promoted": true,
+      "search_tracking_params": {
+        "score": 1
+      },
+      "service_fee": {
+        "amount": "3.45",
+        "currency_code": "EUR"
+      },
+      "show_1st_time_seller_discount": false,
+      "title": "Nike Air Max 1 “Grey Gum”",
+      "total_item_price": {
+        "amount": "58.45",
+        "currency_code": "EUR"
+      },
+      "url": "/items/10035663984-nike-air-max-1-grey-gum",
+      "user": {
+        "business": false,
+        "id": 48889333,
+        "login": "stefankuijf"
+      },
+      "view_count": 0
+    },
+    {
+      "content_source": "search_promoted_items",
+      "favourite_count": 8,
+      "id": 10051526753,
+      "is_favourite": false,
+      "item_box": {
+        "accessibility_label": "Nike Air Max 1 “White Black Chlorophyll”, Brand: Nike, Condizioni: Buone, Taglia: 43, 75.00 €, 79.45 €",
+        "exposures": [],
+        "ff_exposures": [],
+        "first_line": "Nike",
+        "item_id": 10051526753,
+        "second_line": "43 · Buone"
+      },
+      "photo": {
+        "dominant_color": "#676664",
+        "dominant_color_opaque": "#D1D1D1",
+        "extra": {},
+        "full_size_url": "https://images1.vinted.net/tc/06_00354_YqePrLt6bq5K12cf6kEbsorg/3af59229.webp?s=abe3161251ddffe909512252a0b1b2891de037b9",
+        "height": 800,
+        "high_resolution": {
+          "id": "06_00354_YqePrLt6bq5K12cf6kEbsorg",
+          "orientation": null
+        },
+        "id": 1,
+        "image_no": 1,
+        "is_main": true,
+        "thumbnails": [
+          {
+            "height": 100,
+            "original_size": null,
+            "type": "thumb70x100",
+            "url": "https://images1.vinted.net/t/06_00354_YqePrLt6bq5K12cf6kEbsorg/70x100/3af59229.webp?s=42d3b2729ac8ec8b9efb54b10ff04dfc94625aa0",
+            "width": 70
+          },
+          {
+            "height": 210,
+            "original_size": null,
+            "type": "thumb150x210",
+            "url": "https://images1.vinted.net/t/06_00354_YqePrLt6bq5K12cf6kEbsorg/150x210/3af59229.webp?s=d9a37f37aef3a10bb19c4639107307c0a089c6e3",
+            "width": 150
+          },
+          {
+            "height": 430,
+            "original_size": null,
+            "type": "thumb310x430",
+            "url": "https://images1.vinted.net/t/06_00354_YqePrLt6bq5K12cf6kEbsorg/310x430/3af59229.webp?s=748cbbd126e3a2e6f0b62c9e6df56bf4bd4d751a",
+            "width": 310
+          },
+          {
+            "height": 428,
+            "original_size": true,
+            "type": "thumb428x624",
+            "url": "https://images1.vinted.net/t/06_00354_YqePrLt6bq5K12cf6kEbsorg/f800/3af59229.webp?s=8e47658c49fc4915a6ebe58f87499e1c7af7c036",
+            "width": 321
+          },
+          {
+            "height": 624,
+            "original_size": true,
+            "type": "thumb624x428",
+            "url": "https://images1.vinted.net/t/06_00354_YqePrLt6bq5K12cf6kEbsorg/f800/3af59229.webp?s=8e47658c49fc4915a6ebe58f87499e1c7af7c036",
+            "width": 468
+          },
+          {
+            "height": 364,
+            "original_size": true,
+            "type": "thumb364x428",
+            "url": "https://images1.vinted.net/t/06_00354_YqePrLt6bq5K12cf6kEbsorg/f800/3af59229.webp?s=8e47658c49fc4915a6ebe58f87499e1c7af7c036",
+            "width": 273
+          }
+        ],
+        "url": "https://images1.vinted.net/t/06_00354_YqePrLt6bq5K12cf6kEbsorg/f800/3af59229.webp?s=8e47658c49fc4915a6ebe58f87499e1c7af7c036",
+        "width": 600
+      },
+      "photos": [
+        {
+          "dominant_color": "#676664",
+          "dominant_color_opaque": "#D1D1D1",
+          "extra": {},
+          "full_size_url": "https://images1.vinted.net/tc/06_00354_YqePrLt6bq5K12cf6kEbsorg/3af59229.webp?s=abe3161251ddffe909512252a0b1b2891de037b9",
+          "height": 800,
+          "high_resolution": {
+            "id": "06_00354_YqePrLt6bq5K12cf6kEbsorg",
+            "orientation": null
+          },
+          "id": 1,
+          "image_no": 1,
+          "is_main": true,
+          "thumbnails": [
+            {
+              "height": 100,
+              "original_size": null,
+              "type": "thumb70x100",
+              "url": "https://images1.vinted.net/t/06_00354_YqePrLt6bq5K12cf6kEbsorg/70x100/3af59229.webp?s=42d3b2729ac8ec8b9efb54b10ff04dfc94625aa0",
+              "width": 70
+            },
+            {
+              "height": 210,
+              "original_size": null,
+              "type": "thumb150x210",
+              "url": "https://images1.vinted.net/t/06_00354_YqePrLt6bq5K12cf6kEbsorg/150x210/3af59229.webp?s=d9a37f37aef3a10bb19c4639107307c0a089c6e3",
+              "width": 150
+            },
+            {
+              "height": 430,
+              "original_size": null,
+              "type": "thumb310x430",
+              "url": "https://images1.vinted.net/t/06_00354_YqePrLt6bq5K12cf6kEbsorg/310x430/3af59229.webp?s=748cbbd126e3a2e6f0b62c9e6df56bf4bd4d751a",
+              "width": 310
+            },
+            {
+              "height": 428,
+              "original_size": true,
+              "type": "thumb428x624",
+              "url": "https://images1.vinted.net/t/06_00354_YqePrLt6bq5K12cf6kEbsorg/f800/3af59229.webp?s=8e47658c49fc4915a6ebe58f87499e1c7af7c036",
+              "width": 321
+            },
+            {
+              "height": 624,
+              "original_size": true,
+              "type": "thumb624x428",
+              "url": "https://images1.vinted.net/t/06_00354_YqePrLt6bq5K12cf6kEbsorg/f800/3af59229.webp?s=8e47658c49fc4915a6ebe58f87499e1c7af7c036",
+              "width": 468
+            },
+            {
+              "height": 364,
+              "original_size": true,
+              "type": "thumb364x428",
+              "url": "https://images1.vinted.net/t/06_00354_YqePrLt6bq5K12cf6kEbsorg/f800/3af59229.webp?s=8e47658c49fc4915a6ebe58f87499e1c7af7c036",
+              "width": 273
+            }
+          ],
+          "url": "https://images1.vinted.net/t/06_00354_YqePrLt6bq5K12cf6kEbsorg/f800/3af59229.webp?s=8e47658c49fc4915a6ebe58f87499e1c7af7c036",
+          "width": 600
+        }
+      ],
+      "price": {
+        "amount": "75.00",
+        "currency_code": "EUR"
+      },
+      "promoted": true,
+      "search_tracking_params": {
+        "score": 0.9495759606361389
+      },
+      "service_fee": {
+        "amount": "4.45",
+        "currency_code": "EUR"
+      },
+      "show_1st_time_seller_discount": false,
+      "title": "Nike Air Max 1 “White Black Chlorophyll”",
+      "total_item_price": {
+        "amount": "79.45",
+        "currency_code": "EUR"
+      },
+      "url": "/items/10051526753-nike-air-max-1-white-black-chlorophyll",
+      "user": {
+        "business": false,
+        "id": 48889333,
+        "login": "stefankuijf"
+      },
+      "view_count": 0
+    },
+    {
+      "content_source": "search",
+      "favourite_count": 14,
+      "id": 10026693491,
+      "is_favourite": false,
+      "item_box": {
+        "accessibility_label": "Basket Nike air, Brand: Nike Air, Condizioni: Ottime, Taglia: 36.5, 58.00 €, 61.60 €",
+        "exposures": [],
+        "ff_exposures": [],
+        "first_line": "Nike Air",
+        "item_id": 10026693491,
+        "second_line": "36.5 · Ottime"
+      },
+      "photo": {
+        "dominant_color": "#908480",
+        "dominant_color_opaque": "#DEDAD9",
+        "extra": {},
+        "full_size_url": "https://images1.vinted.net/tc/02_00e26_51F4jLWnVXDuAM8UJ7t6fu2u/ddce62f7.webp?s=74e2542e01b9db4f0a63a9f2b81e1660e005f0b9",
+        "height": 800,
+        "high_resolution": {
+          "id": "02_00e26_51F4jLWnVXDuAM8UJ7t6fu2u",
+          "orientation": null
+        },
+        "id": 1,
+        "image_no": 1,
+        "is_main": true,
+        "thumbnails": [
+          {
+            "height": 100,
+            "original_size": null,
+            "type": "thumb70x100",
+            "url": "https://images1.vinted.net/t/02_00e26_51F4jLWnVXDuAM8UJ7t6fu2u/70x100/ddce62f7.webp?s=7c0491a62d1edec3db5e717b3c1a402c92c04edd",
+            "width": 70
+          },
+          {
+            "height": 210,
+            "original_size": null,
+            "type": "thumb150x210",
+            "url": "https://images1.vinted.net/t/02_00e26_51F4jLWnVXDuAM8UJ7t6fu2u/150x210/ddce62f7.webp?s=a59aa1e183257f0abba9b8d09d030bd8ad70ada8",
+            "width": 150
+          },
+          {
+            "height": 430,
+            "original_size": null,
+            "type": "thumb310x430",
+            "url": "https://images1.vinted.net/t/02_00e26_51F4jLWnVXDuAM8UJ7t6fu2u/310x430/ddce62f7.webp?s=ca1fb048376f6f6ee5fad346f0edafa2d5260482",
+            "width": 310
+          },
+          {
+            "height": 428,
+            "original_size": true,
+            "type": "thumb428x624",
+            "url": "https://images1.vinted.net/t/02_00e26_51F4jLWnVXDuAM8UJ7t6fu2u/f800/ddce62f7.webp?s=fec40abf713c1b1e3e295d88c79585484e21d68b",
+            "width": 358
+          },
+          {
+            "height": 624,
+            "original_size": true,
+            "type": "thumb624x428",
+            "url": "https://images1.vinted.net/t/02_00e26_51F4jLWnVXDuAM8UJ7t6fu2u/f800/ddce62f7.webp?s=fec40abf713c1b1e3e295d88c79585484e21d68b",
+            "width": 522
+          },
+          {
+            "height": 364,
+            "original_size": true,
+            "type": "thumb364x428",
+            "url": "https://images1.vinted.net/t/02_00e26_51F4jLWnVXDuAM8UJ7t6fu2u/f800/ddce62f7.webp?s=fec40abf713c1b1e3e295d88c79585484e21d68b",
+            "width": 305
+          }
+        ],
+        "url": "https://images1.vinted.net/t/02_00e26_51F4jLWnVXDuAM8UJ7t6fu2u/f800/ddce62f7.webp?s=fec40abf713c1b1e3e295d88c79585484e21d68b",
+        "width": 670
+      },
+      "photos": [
+        {
+          "dominant_color": "#908480",
+          "dominant_color_opaque": "#DEDAD9",
+          "extra": {},
+          "full_size_url": "https://images1.vinted.net/tc/02_00e26_51F4jLWnVXDuAM8UJ7t6fu2u/ddce62f7.webp?s=74e2542e01b9db4f0a63a9f2b81e1660e005f0b9",
+          "height": 800,
+          "high_resolution": {
+            "id": "02_00e26_51F4jLWnVXDuAM8UJ7t6fu2u",
+            "orientation": null
+          },
+          "id": 1,
+          "image_no": 1,
+          "is_main": true,
+          "thumbnails": [
+            {
+              "height": 100,
+              "original_size": null,
+              "type": "thumb70x100",
+              "url": "https://images1.vinted.net/t/02_00e26_51F4jLWnVXDuAM8UJ7t6fu2u/70x100/ddce62f7.webp?s=7c0491a62d1edec3db5e717b3c1a402c92c04edd",
+              "width": 70
+            },
+            {
+              "height": 210,
+              "original_size": null,
+              "type": "thumb150x210",
+              "url": "https://images1.vinted.net/t/02_00e26_51F4jLWnVXDuAM8UJ7t6fu2u/150x210/ddce62f7.webp?s=a59aa1e183257f0abba9b8d09d030bd8ad70ada8",
+              "width": 150
+            },
+            {
+              "height": 430,
+              "original_size": null,
+              "type": "thumb310x430",
+              "url": "https://images1.vinted.net/t/02_00e26_51F4jLWnVXDuAM8UJ7t6fu2u/310x430/ddce62f7.webp?s=ca1fb048376f6f6ee5fad346f0edafa2d5260482",
+              "width": 310
+            },
+            {
+              "height": 428,
+              "original_size": true,
+              "type": "thumb428x624",
+              "url": "https://images1.vinted.net/t/02_00e26_51F4jLWnVXDuAM8UJ7t6fu2u/f800/ddce62f7.webp?s=fec40abf713c1b1e3e295d88c79585484e21d68b",
+              "width": 358
+            },
+            {
+              "height": 624,
+              "original_size": true,
+              "type": "thumb624x428",
+              "url": "https://images1.vinted.net/t/02_00e26_51F4jLWnVXDuAM8UJ7t6fu2u/f800/ddce62f7.webp?s=fec40abf713c1b1e3e295d88c79585484e21d68b",
+              "width": 522
+            },
+            {
+              "height": 364,
+              "original_size": true,
+              "type": "thumb364x428",
+              "url": "https://images1.vinted.net/t/02_00e26_51F4jLWnVXDuAM8UJ7t6fu2u/f800/ddce62f7.webp?s=fec40abf713c1b1e3e295d88c79585484e21d68b",
+              "width": 305
+            }
+          ],
+          "url": "https://images1.vinted.net/t/02_00e26_51F4jLWnVXDuAM8UJ7t6fu2u/f800/ddce62f7.webp?s=fec40abf713c1b1e3e295d88c79585484e21d68b",
+          "width": 670
+        }
+      ],
+      "price": {
+        "amount": "58.00",
+        "currency_code": "EUR"
+      },
+      "promoted": false,
+      "search_tracking_params": {
+        "score": 0.9884323477745056
+      },
+      "service_fee": {
+        "amount": "3.60",
+        "currency_code": "EUR"
+      },
+      "show_1st_time_seller_discount": false,
+      "title": "Basket Nike air",
+      "total_item_price": {
+        "amount": "61.60",
+        "currency_code": "EUR"
+      },
+      "url": "/items/10026693491-basket-nike-air",
+      "user": {
+        "business": false,
+        "id": 12954406,
+        "login": "sam572"
+      },
+      "view_count": 0
+    },
+    {
+      "content_source": "search",
+      "favourite_count": 8,
+      "id": 10015383004,
+      "is_favourite": false,
+      "item_box": {
+        "accessibility_label": "Nike air max nere numero 39, Brand: Nike Air, Condizioni: Ottime, Taglia: 39, 30.00 €, 32.20 €",
+        "exposures": [],
+        "ff_exposures": [],
+        "first_line": "Nike Air",
+        "item_id": 10015383004,
+        "second_line": "39 · Ottime"
+      },
+      "photo": {
+        "dominant_color": "#4A443D",
+        "dominant_color_opaque": "#C9C7C5",
+        "extra": {},
+        "full_size_url": "https://images1.vinted.net/tc/05_004cd_QffpNMCLezhmtEkDZTwTtkLd/d3ff725d.webp?s=41cf2b89291479c12225b25099573ce20be7c6c7",
+        "height": 800,
+        "high_resolution": {
+          "id": "05_004cd_QffpNMCLezhmtEkDZTwTtkLd",
+          "orientation": null
+        },
+        "id": 1,
+        "image_no": 1,
+        "is_main": true,
+        "thumbnails": [
+          {
+            "height": 100,
+            "original_size": null,
+            "type": "thumb70x100",
+            "url": "https://images1.vinted.net/t/05_004cd_QffpNMCLezhmtEkDZTwTtkLd/70x100/d3ff725d.webp?s=f8b5a97595f0b962401c3bd3d60eb1d2592ef85f",
+            "width": 70
+          },
+          {
+            "height": 210,
+            "original_size": null,
+            "type": "thumb150x210",
+            "url": "https://images1.vinted.net/t/05_004cd_QffpNMCLezhmtEkDZTwTtkLd/150x210/d3ff725d.webp?s=c597b19a4b205da83486afd5fb702facfc856e4a",
+            "width": 150
+          },
+          {
+            "height": 430,
+            "original_size": null,
+            "type": "thumb310x430",
+            "url": "https://images1.vinted.net/t/05_004cd_QffpNMCLezhmtEkDZTwTtkLd/310x430/d3ff725d.webp?s=a5629963eede374d7897f8060f884f5d286d6ca1",
+            "width": 310
+          },
+          {
+            "height": 428,
+            "original_size": true,
+            "type": "thumb428x624",
+            "url": "https://images1.vinted.net/t/05_004cd_QffpNMCLezhmtEkDZTwTtkLd/f800/d3ff725d.webp?s=6bcb7ffe03b4847b0f993fc97fcb1ff707d64d59",
+            "width": 321
+          },
+          {
+            "height": 624,
+            "original_size": true,
+            "type": "thumb624x428",
+            "url": "https://images1.vinted.net/t/05_004cd_QffpNMCLezhmtEkDZTwTtkLd/f800/d3ff725d.webp?s=6bcb7ffe03b4847b0f993fc97fcb1ff707d64d59",
+            "width": 468
+          },
+          {
+            "height": 364,
+            "original_size": true,
+            "type": "thumb364x428",
+            "url": "https://images1.vinted.net/t/05_004cd_QffpNMCLezhmtEkDZTwTtkLd/f800/d3ff725d.webp?s=6bcb7ffe03b4847b0f993fc97fcb1ff707d64d59",
+            "width": 273
+          }
+        ],
+        "url": "https://images1.vinted.net/t/05_004cd_QffpNMCLezhmtEkDZTwTtkLd/f800/d3ff725d.webp?s=6bcb7ffe03b4847b0f993fc97fcb1ff707d64d59",
+        "width": 600
+      },
+      "photos": [
+        {
+          "dominant_color": "#4A443D",
+          "dominant_color_opaque": "#C9C7C5",
+          "extra": {},
+          "full_size_url": "https://images1.vinted.net/tc/05_004cd_QffpNMCLezhmtEkDZTwTtkLd/d3ff725d.webp?s=41cf2b89291479c12225b25099573ce20be7c6c7",
+          "height": 800,
+          "high_resolution": {
+            "id": "05_004cd_QffpNMCLezhmtEkDZTwTtkLd",
+            "orientation": null
+          },
+          "id": 1,
+          "image_no": 1,
+          "is_main": true,
+          "thumbnails": [
+            {
+              "height": 100,
+              "original_size": null,
+              "type": "thumb70x100",
+              "url": "https://images1.vinted.net/t/05_004cd_QffpNMCLezhmtEkDZTwTtkLd/70x100/d3ff725d.webp?s=f8b5a97595f0b962401c3bd3d60eb1d2592ef85f",
+              "width": 70
+            },
+            {
+              "height": 210,
+              "original_size": null,
+              "type": "thumb150x210",
+              "url": "https://images1.vinted.net/t/05_004cd_QffpNMCLezhmtEkDZTwTtkLd/150x210/d3ff725d.webp?s=c597b19a4b205da83486afd5fb702facfc856e4a",
+              "width": 150
+            },
+            {
+              "height": 430,
+              "original_size": null,
+              "type": "thumb310x430",
+              "url": "https://images1.vinted.net/t/05_004cd_QffpNMCLezhmtEkDZTwTtkLd/310x430/d3ff725d.webp?s=a5629963eede374d7897f8060f884f5d286d6ca1",
+              "width": 310
+            },
+            {
+              "height": 428,
+              "original_size": true,
+              "type": "thumb428x624",
+              "url": "https://images1.vinted.net/t/05_004cd_QffpNMCLezhmtEkDZTwTtkLd/f800/d3ff725d.webp?s=6bcb7ffe03b4847b0f993fc97fcb1ff707d64d59",
+              "width": 321
+            },
+            {
+              "height": 624,
+              "original_size": true,
+              "type": "thumb624x428",
+              "url": "https://images1.vinted.net/t/05_004cd_QffpNMCLezhmtEkDZTwTtkLd/f800/d3ff725d.webp?s=6bcb7ffe03b4847b0f993fc97fcb1ff707d64d59",
+              "width": 468
+            },
+            {
+              "height": 364,
+              "original_size": true,
+              "type": "thumb364x428",
+              "url": "https://images1.vinted.net/t/05_004cd_QffpNMCLezhmtEkDZTwTtkLd/f800/d3ff725d.webp?s=6bcb7ffe03b4847b0f993fc97fcb1ff707d64d59",
+              "width": 273
+            }
+          ],
+          "url": "https://images1.vinted.net/t/05_004cd_QffpNMCLezhmtEkDZTwTtkLd/f800/d3ff725d.webp?s=6bcb7ffe03b4847b0f993fc97fcb1ff707d64d59",
+          "width": 600
+        }
+      ],
+      "price": {
+        "amount": "30.00",
+        "currency_code": "EUR"
+      },
+      "promoted": false,
+      "search_tracking_params": {
+        "score": 0.9870731234550476
+      },
+      "service_fee": {
+        "amount": "2.20",
+        "currency_code": "EUR"
+      },
+      "show_1st_time_seller_discount": false,
+      "title": "Nike air max nere numero 39",
+      "total_item_price": {
+        "amount": "32.20",
+        "currency_code": "EUR"
+      },
+      "url": "/items/10015383004-nike-air-max-nere-numero-39",
+      "user": {
+        "business": false,
+        "id": 258496610,
+        "login": "a.levi86"
+      },
+      "view_count": 0
+    }
+  ],
+  "pagination": {
+    "current_page": 1,
+    "per_page": 5,
+    "time": 1789808579,
+    "total_entries": 960,
+    "total_pages": 192
+  },
+  "search_tracking_params": {
+    "global_search_session_id": "801630c4-8161-40fb-8182-d8676a150a46",
+    "search_correlation_id": "69019d71-0d0e-4276-ba9b-d2b19aff37d0",
+    "search_session_id": "942f16ea-0ba8-4a2f-894c-877a87f1b68e"
+  }
+}
