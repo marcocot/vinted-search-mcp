@@ -28,7 +28,7 @@ jobs:
       - name: Enable pnpm
         run: corepack enable
 
-      - name: Install deps (retried: the runner overlay fs intermittently EAGAINs on copyfile)
+      - name: Install deps, retried because the runner overlay fs intermittently EAGAINs on copyfile
         run: |
           for attempt in 1 2 3; do
             pnpm install --frozen-lockfile && exit 0
