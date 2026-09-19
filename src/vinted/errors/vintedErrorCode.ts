@@ -1,0 +1,9 @@
+export type VintedErrorCode =
+  | "INVALID_ITEM_ID"
+  | "PARSE_ERROR"
+  | "RATE_LIMITED"
+  | "UPSTREAM_ERROR"
+  | "BLOCKED"
+  | "NOT_FOUND"
+  | "UNKNOWN_MARKETPLACE"
+  | "CONFIG_ERROR";
