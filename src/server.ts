@@ -66,7 +66,7 @@ const main = async (): Promise<void> => {
   const buildServer = (): McpServer => {
     const server = new McpServer({
       name: "vinted-search-mcp",
-      version: "0.1.2",
+      version: "0.1.3",
     });
     registerSearchItems({ server, service: searches, marketplace, logger });
     registerGetItem({ server, service: items, marketplace, logger });

@@ -1,3 +1,11 @@
 allowBuilds:
   esbuild: true
   unrs-resolver: true
+
+# pnpm 12 rifiuta di default i pacchetti pubblicati da meno di 24 ore. La
+# protezione serve contro una release compromessa presa al volo, ma qui il
+# lockfile e' committato, ogni dipendenza e' pinnata a una versione esatta e
+# gli aggiornamenti arrivano da PR di Renovate: la CI installa esattamente
+# cio' che abbiamo gia' guardato. Senza questa riga il check ha bocciato una
+# build per eslint@10.11.0, che nel nostro albero non c'e' nemmeno.
+minimumReleaseAge: 0
