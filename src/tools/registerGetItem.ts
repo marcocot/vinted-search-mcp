@@ -21,11 +21,14 @@ export const registerGetItem = (
         "does not report favourites, views and seller, which exist only in search results. A " +
         "sold or withdrawn listing answers NOT_FOUND or available=false.",
       inputSchema: {
+        // A number is as natural a way to send an id as a string, and a
+        // client that picks the wrong one deserves an answer, not a schema
+        // error it cannot see past.
         item: z
-          .string()
-          .min(1)
+          .union([z.string().min(1), z.number().int().positive()])
           .describe(
-            `Numeric listing id, or full URL (https://${marketplace.host}/items/...).`,
+            `Listing id, as a number or a string, or the full URL ` +
+              `(https://${marketplace.host}/items/...).`,
           ),
       },
       outputSchema: {
@@ -44,7 +47,7 @@ export const registerGetItem = (
     },
     async (args) => {
       try {
-        const detail = await service.getItem(args.item);
+        const detail = await service.getItem(String(args.item));
         const price =
           detail.price === null
             ? "price unavailable"

@@ -65,6 +65,19 @@ describe("registerGetItem", () => {
     ]);
   });
 
+  it("takes the id as a number too", async () => {
+    const getItem = vi.fn<ItemSource["getItem"]>(async () => detail);
+    const client = await connect(getItem);
+
+    const response = await client.callTool({
+      name: "get_item",
+      arguments: { item: 10052431430 },
+    });
+
+    expect(response.isError).toBeFalsy();
+    expect(getItem).toHaveBeenCalledWith("10052431430");
+  });
+
   it("summarises a listing with no price", async () => {
     const client = await connect(
       vi.fn<ItemSource["getItem"]>(async () => ({ ...detail, price: null })),
