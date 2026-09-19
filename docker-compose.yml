@@ -1,0 +1,21 @@
+services:
+  vinted-search-mcp:
+    build: .
+    image: vinted-search-mcp:dev
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      VIN_TRANSPORT: http
+      VIN_HTTP_HOST: 0.0.0.0
+      # Required: without it the server refuses to start.
+      VIN_MCP_TOKEN: "${VIN_MCP_TOKEN:?generate one with: openssl rand -hex 24}"
+      # The Host header clients use. Without it every request is refused as a
+      # rebinding attempt.
+      VIN_HTTP_ALLOWED_HOSTS: ${VIN_HTTP_ALLOWED_HOSTS:-localhost:3000,127.0.0.1:3000}
+      VIN_MARKETPLACE: ${VIN_MARKETPLACE:-it}
+      # Nobody solves a Cloudflare challenge inside a container, so point this
+      # at a FlareSolverr that can.
+      VIN_FLARESOLVERR_URL: ${VIN_FLARESOLVERR_URL:-}
+      VIN_SESSION_KEEPALIVE: "true"
+      VIN_RATE_LIMIT_PER_MINUTE: ${VIN_RATE_LIMIT_PER_MINUTE:-6}

@@ -1,0 +1,48 @@
+# CI for Forgejo Actions: lint, build and test on push and pull request.
+# Jobs run inside a Node toolchain container, and actions are referenced by
+# full URL because the homelab runner has no actions mirror.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  # Callable by release.yaml, so the release pipeline reuses this exact job.
+  workflow_call:
+
+jobs:
+  build:
+    name: Lint, build & test
+    runs-on: ubuntu-latest
+    container:
+      image: node:24
+    env:
+      # The runner's overlay fs answers pnpm's default hardlink/clone with
+      # EAGAIN; plain copies avoid the call.
+      npm_config_package_import_method: copy
+    steps:
+      - uses: https://github.com/actions/checkout@v4
+        with:
+          token: ${{ secrets.REGISTRY_TOKEN }}
+
+      - name: Enable pnpm
+        run: corepack enable
+
+      - name: Install deps (retried: the runner overlay fs intermittently EAGAINs on copyfile)
+        run: |
+          for attempt in 1 2 3; do
+            pnpm install --frozen-lockfile && exit 0
+            echo "pnpm install attempt $attempt failed; retrying..."
+            sleep 3
+          done
+          exit 1
+
+      - name: Lint
+        run: pnpm lint
+
+      # Tests run on uncompiled sources, so a type error hides without this.
+      - name: Build
+        run: pnpm build
+
+      - name: Test with coverage gate
+        run: pnpm test

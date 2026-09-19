@@ -1,0 +1,111 @@
+# Release pipeline (internal CI/CD standard). On a version tag:
+#   test    → reuse ci.yaml (DRY gate: nothing ships if it fails)
+#   publish → build and push the image (only after test)
+#   release → create the Forgejo release and changelog (only after publish,
+#             running the shared create-release.mjs from marco/forgejo-ci,
+#             checked out at runtime so the logic lives in one place)
+#   deploy  → trigger the Semaphore webhook (only after publish, so the deploy
+#             finds the image already pushed)
+# publish runs in docker:cli with the host docker socket mounted; actions are
+# referenced by full URL; linux/amd64 only.
+name: release
+
+on:
+  push:
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+'
+
+env:
+  REGISTRY: git.homelab.devncode.it
+
+jobs:
+  test:
+    uses: ./.forgejo/workflows/ci.yaml
+    secrets: inherit
+
+  publish:
+    name: Publish image
+    needs: test
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    container:
+      image: docker:cli
+      options: -v /var/run/docker.sock:/var/run/docker.sock
+    steps:
+      - name: Install missing tools
+        run: apk add --no-cache nodejs bash git ca-certificates
+
+      - uses: https://github.com/actions/checkout@v4
+        with:
+          token: ${{ secrets.REGISTRY_TOKEN }}
+
+      - uses: https://github.com/docker/setup-buildx-action@v3
+
+      - name: Log in to Forgejo registry
+        uses: https://github.com/docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ secrets.REGISTRY_USERNAME }}
+          password: ${{ secrets.REGISTRY_TOKEN }}
+
+      - name: Extract metadata
+        id: meta
+        uses: https://github.com/docker/metadata-action@v5
+        with:
+          images: ${{ env.REGISTRY }}/marco/vinted-search-mcp
+          tags: |
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=raw,value=latest
+
+      - name: Build and push
+        uses: https://github.com/docker/build-push-action@v6
+        with:
+          context: .
+          platforms: linux/amd64
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+
+  release:
+    name: Create release
+    needs: publish
+    runs-on: ubuntu-latest
+    steps:
+      - uses: https://github.com/actions/checkout@v4
+        with:
+          token: ${{ secrets.REGISTRY_TOKEN }}
+          fetch-depth: 0
+      - uses: https://github.com/actions/checkout@v4
+        with:
+          repository: marco/forgejo-ci
+          ref: main
+          path: .ci-tools
+          token: ${{ secrets.REGISTRY_TOKEN }}
+      - name: Create release and changelog
+        env:
+          TAG: ${{ github.ref_name }}
+          TOKEN: ${{ secrets.REGISTRY_TOKEN }}
+          REPO: ${{ github.repository }}
+          API_BASE: https://git.homelab.devncode.it/api/v1
+        run: node .ci-tools/create-release.mjs
+
+  deploy:
+    name: Deploy via Semaphore
+    needs: publish
+    runs-on: ubuntu-latest
+    container:
+      image: docker:cli
+    steps:
+      # Fired after the image is pushed, so the deploy pulls the fresh one.
+      # Semaphore runs the deploy-vinted-search-mcp template
+      # (ansible site.yml --tags vinted-search-mcp).
+      - name: Trigger Semaphore deploy
+        run: |
+          apk add --no-cache curl
+          curl -fsS -X POST "${{ secrets.SEMAPHORE_WEBHOOK_URL }}" \
+            -H "X-Semaphore-Token: ${{ secrets.SEMAPHORE_WEBHOOK_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d "{\"ref\":\"${{ github.ref }}\"}"
