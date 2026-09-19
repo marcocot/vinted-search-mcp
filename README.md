@@ -136,6 +136,17 @@ Tests never touch the network. The parsers run against real captured responses i
 Vinted changes the shape of what it returns without warning, and a stale fixture
 keeps the suite green against a response nobody serves anymore.
 
+## Contributing
+
+Development happens on a private Forgejo instance, and this GitHub repository is
+a push mirror of it. Two things follow. Issues and pull requests are welcome
+here, and they get replayed into Forgejo and land back through the next sync,
+under your authorship. A commit merged straight into `main` on GitHub, on the
+other hand, disappears at the next mirror push, so nothing skips that path.
+
+The gate is `pnpm lint`, `pnpm build`, `pnpm test`, in that order, with coverage
+at 85% or the suite fails. `CLAUDE.md` carries the conventions the code follows.
+
 ## License
 
 MIT. See [LICENSE](LICENSE).
