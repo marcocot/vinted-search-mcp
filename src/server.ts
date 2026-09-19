@@ -66,14 +66,19 @@ const main = async (): Promise<void> => {
   const buildServer = (): McpServer => {
     const server = new McpServer({
       name: "vinted-search-mcp",
-      version: "0.1.1",
+      version: "0.1.2",
     });
-    registerSearchItems(server, searches, marketplace);
-    registerGetItem(server, items, marketplace);
+    registerSearchItems({ server, service: searches, marketplace, logger });
+    registerGetItem({ server, service: items, marketplace, logger });
     return server;
   };
 
-  const transport = await startTransport({ buildServer, config, metrics });
+  const transport = await startTransport({
+    buildServer,
+    config,
+    metrics,
+    logger,
+  });
   if (config.sessionKeepAlive) {
     keepSessionWarm(session, config.sessionTtlMs, logger);
   }

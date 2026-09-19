@@ -1,15 +1,21 @@
 import type { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { z } from "zod";
 import type { Marketplace } from "@/marketplace/marketplace.js";
+import type { Logger } from "@/logger/logger.js";
+import { logToolFailure } from "@/tools/logToolFailure.js";
 import { nullable } from "@/tools/nullable.js";
 import { toolError } from "@/tools/toolError.js";
 import type { ItemService } from "@/vinted/itemService.js";
 
-export const registerGetItem = (
-  server: McpServer,
-  service: ItemService,
-  marketplace: Marketplace,
-): void => {
+type RegisterGetItemOptions = {
+  server: McpServer;
+  service: ItemService;
+  marketplace: Marketplace;
+  logger: Logger;
+};
+
+export const registerGetItem = (options: RegisterGetItemOptions): void => {
+  const { server, service, marketplace, logger } = options;
   server.registerTool(
     "get_item",
     {
@@ -59,6 +65,7 @@ export const registerGetItem = (
           structuredContent: detail,
         };
       } catch (error) {
+        logToolFailure(logger, "get_item", error);
         return toolError(error);
       }
     },

@@ -2,6 +2,7 @@ import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import { InMemoryTransport } from "@modelcontextprotocol/sdk/inMemory.js";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { describe, expect, it, vi } from "vitest";
+import { createLogger } from "@/logger/createLogger.js";
 import { getMarketplace } from "@/marketplace/getMarketplace.js";
 import { Metrics } from "@/metrics/metrics.js";
 import { Cache } from "@/storage/cache.js";
@@ -42,17 +43,19 @@ const connect = async (search: ItemSource["search"]) => {
     search,
     getItem: vi.fn<ItemSource["getItem"]>(),
   };
+  const lines: string[] = [];
   const server = new McpServer({ name: "test", version: "0.0.0" });
-  registerSearchItems(
+  registerSearchItems({
     server,
-    new SearchService({
+    service: new SearchService({
       source,
       cache: new Cache<SearchResult>(1000, () => 0),
       limiter: new RateLimiter(100, () => 0),
       metrics: new Metrics(),
     }),
-    getMarketplace("it"),
-  );
+    marketplace: getMarketplace("it"),
+    logger: createLogger((line) => lines.push(line)),
+  });
   const [clientTransport, serverTransport] =
     InMemoryTransport.createLinkedPair();
   const client = new Client({ name: "test", version: "0.0.0" });
@@ -60,7 +63,7 @@ const connect = async (search: ItemSource["search"]) => {
     client.connect(clientTransport),
     server.connect(serverTransport),
   ]);
-  return client;
+  return { client, lines };
 };
 
 const rejected: [Record<string, unknown>, string][] = [
@@ -72,7 +75,7 @@ const rejected: [Record<string, unknown>, string][] = [
 
 describe("registerSearchItems", () => {
   it("announces the marketplace it searches", async () => {
-    const client = await connect(
+    const { client } = await connect(
       vi.fn<ItemSource["search"]>(async () => result),
     );
     const { tools } = await client.listTools();
@@ -82,7 +85,7 @@ describe("registerSearchItems", () => {
   });
 
   it("returns results as structured content", async () => {
-    const client = await connect(
+    const { client } = await connect(
       vi.fn<ItemSource["search"]>(async () => result),
     );
 
@@ -97,7 +100,7 @@ describe("registerSearchItems", () => {
 
   it("applies the defaults for page, size and sort order", async () => {
     const search = vi.fn<ItemSource["search"]>(async () => result);
-    const client = await connect(search);
+    const { client } = await connect(search);
 
     await client.callTool({
       name: "search_items",
@@ -114,7 +117,7 @@ describe("registerSearchItems", () => {
 
   it("passes price filters only when given", async () => {
     const search = vi.fn<ItemSource["search"]>(async () => result);
-    const client = await connect(search);
+    const { client } = await connect(search);
 
     await client.callTool({
       name: "search_items",
@@ -128,7 +131,7 @@ describe("registerSearchItems", () => {
   });
 
   it("says outright when there is no listing", async () => {
-    const client = await connect(
+    const { client } = await connect(
       vi.fn<ItemSource["search"]>(async () => ({
         ...result,
         items: [],
@@ -147,7 +150,7 @@ describe("registerSearchItems", () => {
   });
 
   it("reports the error code instead of failing quietly", async () => {
-    const client = await connect(
+    const { client } = await connect(
       vi.fn<ItemSource["search"]>(() =>
         Promise.reject(new RateLimitedError(30)),
       ),
@@ -162,8 +165,27 @@ describe("registerSearchItems", () => {
     expect(JSON.stringify(response.content)).toContain("RATE_LIMITED");
   });
 
+  // Un errore che torna al chiamante e non lascia una riga nei log e' un
+  // guasto che chi gestisce il server scopre solo per lamentele.
+  it("writes the failure down as well as returning it", async () => {
+    const { client, lines } = await connect(
+      vi.fn<ItemSource["search"]>(() =>
+        Promise.reject(new RateLimitedError(30)),
+      ),
+    );
+
+    await client.callTool({
+      name: "search_items",
+      arguments: { query: "nike" },
+    });
+
+    expect(lines.join("")).toContain("tool failed");
+    expect(lines.join("")).toContain("search_items");
+    expect(lines.join("")).toContain("RATE_LIMITED");
+  });
+
   it("translates an error that does not come from the domain", async () => {
-    const client = await connect(
+    const { client } = await connect(
       vi.fn<ItemSource["search"]>(() => Promise.reject(new Error("boom"))),
     );
 
@@ -179,7 +201,7 @@ describe("registerSearchItems", () => {
     "rejects %#: %s before the service sees it",
     async (args) => {
       const search = vi.fn<ItemSource["search"]>(async () => result);
-      const client = await connect(search);
+      const { client } = await connect(search);
 
       const response = await client.callTool({
         name: "search_items",

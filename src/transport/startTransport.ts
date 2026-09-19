@@ -1,6 +1,7 @@
 import type { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import type { Config } from "@/config/config.js";
+import type { Logger } from "@/logger/logger.js";
 import { startHttpServer } from "@/http/startHttpServer.js";
 import type { Metrics } from "@/metrics/metrics.js";
 import { assertTransportIsUsable } from "@/transport/assertTransportIsUsable.js";
@@ -10,6 +11,7 @@ type TransportOptions = {
   buildServer: () => McpServer;
   config: Config;
   metrics: Metrics;
+  logger: Logger;
 };
 
 export const startTransport = async (

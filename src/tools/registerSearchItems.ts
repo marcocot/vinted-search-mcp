@@ -1,6 +1,8 @@
 import type { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { z } from "zod";
 import type { Marketplace } from "@/marketplace/marketplace.js";
+import type { Logger } from "@/logger/logger.js";
+import { logToolFailure } from "@/tools/logToolFailure.js";
 import { nullable } from "@/tools/nullable.js";
 import { toolError } from "@/tools/toolError.js";
 import type { SearchService } from "@/vinted/searchService.js";
@@ -38,11 +40,17 @@ const summarise = (shown: number, total: number): string =>
     ? "No listings found."
     : `${shown} listings on this page, ${total} claimed by Vinted.`;
 
+type RegisterSearchItemsOptions = {
+  server: McpServer;
+  service: SearchService;
+  marketplace: Marketplace;
+  logger: Logger;
+};
+
 export const registerSearchItems = (
-  server: McpServer,
-  service: SearchService,
-  marketplace: Marketplace,
+  options: RegisterSearchItemsOptions,
 ): void => {
+  const { server, service, marketplace, logger } = options;
   server.registerTool(
     "search_items",
     {
@@ -130,6 +138,7 @@ export const registerSearchItems = (
           structuredContent: result,
         };
       } catch (error) {
+        logToolFailure(logger, "search_items", error);
         return toolError(error);
       }
     },

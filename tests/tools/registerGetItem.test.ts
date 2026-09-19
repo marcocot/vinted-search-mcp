@@ -2,6 +2,7 @@ import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import { InMemoryTransport } from "@modelcontextprotocol/sdk/inMemory.js";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { describe, expect, it, vi } from "vitest";
+import { createLogger } from "@/logger/createLogger.js";
 import { getMarketplace } from "@/marketplace/getMarketplace.js";
 import { Metrics } from "@/metrics/metrics.js";
 import { Cache } from "@/storage/cache.js";
@@ -27,17 +28,19 @@ const detail: ItemDetail = {
 
 const connect = async (getItem: ItemSource["getItem"]) => {
   const source: ItemSource = { search: vi.fn<ItemSource["search"]>(), getItem };
+  const lines: string[] = [];
   const server = new McpServer({ name: "test", version: "0.0.0" });
-  registerGetItem(
+  registerGetItem({
     server,
-    new ItemService({
+    service: new ItemService({
       source,
       cache: new Cache<ItemDetail>(1000, () => 0),
       limiter: new RateLimiter(100, () => 0),
       metrics: new Metrics(),
     }),
-    getMarketplace("it"),
-  );
+    marketplace: getMarketplace("it"),
+    logger: createLogger((line) => lines.push(line)),
+  });
   const [clientTransport, serverTransport] =
     InMemoryTransport.createLinkedPair();
   const client = new Client({ name: "test", version: "0.0.0" });
@@ -45,13 +48,13 @@ const connect = async (getItem: ItemSource["getItem"]) => {
     client.connect(clientTransport),
     server.connect(serverTransport),
   ]);
-  return client;
+  return { client, lines };
 };
 
 describe("registerGetItem", () => {
   it("accepts the URL a person pasted", async () => {
     const getItem = vi.fn<ItemSource["getItem"]>(async () => detail);
-    const client = await connect(getItem);
+    const { client } = await connect(getItem);
 
     const response = await client.callTool({
       name: "get_item",
@@ -67,7 +70,7 @@ describe("registerGetItem", () => {
 
   it("takes the id as a number too", async () => {
     const getItem = vi.fn<ItemSource["getItem"]>(async () => detail);
-    const client = await connect(getItem);
+    const { client } = await connect(getItem);
 
     const response = await client.callTool({
       name: "get_item",
@@ -79,7 +82,7 @@ describe("registerGetItem", () => {
   });
 
   it("summarises a listing with no price", async () => {
-    const client = await connect(
+    const { client } = await connect(
       vi.fn<ItemSource["getItem"]>(async () => ({ ...detail, price: null })),
     );
 
@@ -95,7 +98,7 @@ describe("registerGetItem", () => {
 
   it("reports the code when the input is not a listing", async () => {
     const getItem = vi.fn<ItemSource["getItem"]>(async () => detail);
-    const client = await connect(getItem);
+    const { client } = await connect(getItem);
 
     const response = await client.callTool({
       name: "get_item",
