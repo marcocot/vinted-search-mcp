@@ -103,6 +103,24 @@ limiter are shared: the request budget belongs to the site, not to the tool.
   challenge. That is why `VintedHttp` prefers the session's own agent, and why
   FlareSolverr has to leave from the same public address as this server.
 
+## What the logs carry
+
+Every tool call that works writes one line, and the Grafana table "Ultime
+ricerche" is built on it:
+
+```json
+{"ts":"…","level":"info","message":"tool_call","tool":"search_items",
+ "summary":"nike air max 42, fino a 60€","results":88,"cached":false,"ms":812}
+```
+
+`summary` is the query in the words a person would use, which is the whole
+point: reading a search off a dashboard should not mean reading a query
+string. The field names are the same in every MCP server here, so one Loki
+query puts all of them in one table. Amazon predates the contract and writes
+`event`/`query`/`cacheHit`/`durationMs` instead; the dashboard folds the two
+vocabularies together with `label_format` rather than renaming fields its own
+tests assert.
+
 ## Non-negotiable rules
 
 - **`ParseError` is not "no results".** The first says Vinted changed the shape

@@ -2,6 +2,7 @@ import type { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { z } from "zod";
 import type { Marketplace } from "@/marketplace/marketplace.js";
 import type { Logger } from "@/logger/logger.js";
+import { logToolCall } from "@/tools/logToolCall.js";
 import { logToolFailure } from "@/tools/logToolFailure.js";
 import { nullable } from "@/tools/nullable.js";
 import { toolError } from "@/tools/toolError.js";
@@ -52,8 +53,17 @@ export const registerGetItem = (options: RegisterGetItemOptions): void => {
       },
     },
     async (args) => {
+      const started = Date.now();
       try {
-        const detail = await service.getItem(String(args.item));
+        const { value: detail, cached } = await service.getItem(
+          String(args.item),
+        );
+        logToolCall(logger, {
+          tool: "get_item",
+          summary: detail.title,
+          cached,
+          ms: Date.now() - started,
+        });
         const price =
           detail.price === null
             ? "price unavailable"

@@ -2,6 +2,8 @@ import type { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { z } from "zod";
 import type { Marketplace } from "@/marketplace/marketplace.js";
 import type { Logger } from "@/logger/logger.js";
+import { describeSearch } from "@/tools/describeSearch.js";
+import { logToolCall } from "@/tools/logToolCall.js";
 import { logToolFailure } from "@/tools/logToolFailure.js";
 import { nullable } from "@/tools/nullable.js";
 import { toolError } from "@/tools/toolError.js";
@@ -117,8 +119,9 @@ export const registerSearchItems = (
       },
     },
     async (args) => {
+      const started = Date.now();
       try {
-        const result = await service.search({
+        const params = {
           query: args.query,
           page: args.page,
           perPage: args.perPage,
@@ -127,6 +130,14 @@ export const registerSearchItems = (
             ? {}
             : { priceFrom: args.priceFrom }),
           ...(args.priceTo === undefined ? {} : { priceTo: args.priceTo }),
+        };
+        const { value: result, cached } = await service.search(params);
+        logToolCall(logger, {
+          tool: "search_items",
+          summary: describeSearch(params),
+          results: result.totalEntries,
+          cached,
+          ms: Date.now() - started,
         });
         return {
           content: [

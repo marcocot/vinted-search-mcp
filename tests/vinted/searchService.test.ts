@@ -69,7 +69,10 @@ describe("SearchService", () => {
     });
 
     await service.search(params);
-    await expect(service.search(params)).resolves.toEqual(emptyResult);
+    await expect(service.search(params)).resolves.toEqual({
+      value: emptyResult,
+      cached: true,
+    });
   });
 
   it("stops at the rate limiter before calling Vinted", async () => {

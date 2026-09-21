@@ -3,6 +3,7 @@ import type { Cache } from "@/storage/cache.js";
 import type { RateLimiter } from "@/storage/rateLimiter.js";
 import { RateLimitedError } from "@/vinted/errors/rateLimitedError.js";
 import type { ItemSource } from "@/vinted/itemSource.js";
+import type { Outcome } from "@/vinted/outcome.js";
 import type { SearchParams, SearchResult } from "@/vinted/search.js";
 
 type SearchServiceOptions = {
@@ -35,18 +36,18 @@ export class SearchService {
     this.metrics = options.metrics;
   }
 
-  async search(params: SearchParams): Promise<SearchResult> {
+  async search(params: SearchParams): Promise<Outcome<SearchResult>> {
     const key = cacheKey(params);
     const cached = this.cache.get(key);
     if (cached !== undefined) {
       this.metrics.increment("cache_hits_total");
-      return cached;
+      return { value: cached, cached: true };
     }
     this.spend();
     const result = await this.source.search(params);
     this.metrics.increment("searches_total");
     this.cache.set(key, result);
-    return result;
+    return { value: result, cached: false };
   }
 
   private spend(): void {

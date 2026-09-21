@@ -56,6 +56,9 @@ describe("ItemService", () => {
     await expect(service.getItem("not-an-id")).rejects.toThrow(
       InvalidItemIdError,
     );
-    await expect(service.getItem("10052431430")).resolves.toEqual(detail);
+    await expect(service.getItem("10052431430")).resolves.toEqual({
+      value: detail,
+      cached: false,
+    });
   });
 });
