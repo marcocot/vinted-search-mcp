@@ -41,7 +41,7 @@ jobs:
         with:
           token: ${{ secrets.REGISTRY_TOKEN }}
 
-      - uses: https://github.com/docker/setup-buildx-action@v3
+      - uses: https://github.com/docker/setup-buildx-action@v4
 
       - name: Log in to Forgejo registry
         uses: https://github.com/docker/login-action@v3
