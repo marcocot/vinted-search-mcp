@@ -52,7 +52,7 @@ jobs:
 
       - name: Extract metadata
         id: meta
-        uses: https://github.com/docker/metadata-action@v5
+        uses: https://github.com/docker/metadata-action@v6
         with:
           images: ${{ env.REGISTRY }}/marco/vinted-search-mcp
           tags: |
