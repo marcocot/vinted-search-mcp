@@ -23,7 +23,7 @@
     "@fido.id/eslint-config-fido": "2.2.2",
     "@types/node": "26.6.1",
     "@vitest/coverage-v8": "5.0.1",
-    "eslint": "9.39.5",
+    "eslint": "10.11.0",
     "prettier": "3.9.8",
     "tsc-alias": "1.9.5",
     "tsx": "4.23.13",
