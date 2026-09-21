@@ -21,7 +21,7 @@ jobs:
       # EAGAIN; plain copies avoid the call.
       npm_config_package_import_method: copy
     steps:
-      - uses: https://github.com/actions/checkout@v4
+      - uses: https://github.com/actions/checkout@v7
         with:
           token: ${{ secrets.REGISTRY_TOKEN }}
 
